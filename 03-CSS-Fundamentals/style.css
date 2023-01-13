@@ -164,6 +164,17 @@ a:active {
   height: auto;
 }
 
+/*NAV BAR*/
+nav a:link {
+  background-color: orange;
+  margin: 20px;
+}
+
+.nav-bar {
+  background-color: orange;
+  margin: 20px;
+}
+
 /*
 #copyright {
   color: red;
