@@ -1,17 +1,25 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
-  color: #444;
   font-family: sans-serif;
+  color: #444;
   border-top: 10px solid #1098ad;
+  position: relative;
 }
 
 .container {
   width: 800px;
   margin: 0 auto;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  /*height: 80px;*/
 }
 
 nav {
@@ -22,11 +30,8 @@ article {
   margin-bottom: 60px;
 }
 
-.main-header {
-  background-color: #f7f7f7;
-  padding: 20px 40px;
-  margin-bottom: 60px;
-  height: 80px;
+.post-header {
+  margin-bottom: 40px;
 }
 
 aside {
@@ -52,6 +57,7 @@ h1 {
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+  position: relative;
 }
 
 h3 {
@@ -70,10 +76,11 @@ p {
   font-size: 22px;
   line-height: 1.5;
   margin-bottom: 15px;
+  display: inline;
 }
 
-ul,
-ol {
+ol,
+ul {
   margin-left: 50px;
   margin-bottom: 20px;
 }
@@ -87,20 +94,21 @@ li:last-child {
   margin-bottom: 0;
 }
 
-footer p {
+/*footer p {
   font-size: 16px;
 }
+*/
 
 /*article header p {
   font-style: italic;
 }*/
 
-#auhtor {
+#author {
   font-style: italic;
   font-size: 18px;
 }
 
-#copright {
+#copyright {
   font-size: 16px;
 }
 
@@ -109,8 +117,14 @@ footer p {
   font-weight: bold;
 }
 
-.related-list {
+.related {
   list-style: none;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
 }
 
 /*.first-li {
@@ -125,12 +139,7 @@ li:last-child {
   font-style: italic;
 }
 
-/*
-li:nth-child(odd) {
-  color: red;
-}*/
-
-/*Misconception: this won´t work!*/
+/*This won´t work*/
 article p:first-child {
   color: red;
 }
@@ -155,39 +164,58 @@ a:active {
   font-style: italic;
 }
 
-.post-header {
-  margin-bottom: 40px;
-}
+/* LVHA or LUVA hhahahaha
+Link Visited Hover Active*/
 
 .post-img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
-/*NAV BAR*/
 nav a:link {
-  background-color: orange;
+  /*background-color: orangered;
   margin: 20px;
+  padding: 20px;
+  display: inline-block;*/
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
 }
 
-.nav-bar {
-  background-color: orange;
-  margin: 20px;
+nav a:link:last-child {
+  margin-right: 0;
 }
 
-/*
-#copyright {
-  color: red;
+button {
+  /*First put workin in visual style*/
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  /*Second put workin absolute position element*/
+  position: absolute;
+  /*3 put workin top, bottom, aleft and right*/
+  right: 50px;
+  bottom: 50px;
 }
 
-.copyright {
-  color: red;
+h1::first-letter {
+  position: relative;
+
+  font-style: normal;
+  margin-right: 5px;
 }
 
-.text {
-  color: red;
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  /*Nesse extao momento ele é um inline e precisamos transforma-lo em um elemento de bloco*/
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  right: -25px;
+  top: -15px;
 }
-
-footer p {
-  color: green;
-}*/
